@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   camel_to_snake.c                                   :+:      :+:    :+:   */
+/*   do_op.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/02 18:03:08 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/03 11:27:25 by marikhac         ###   ########.fr       */
+/*   Created: 2024/03/03 11:21:33 by marikhac          #+#    #+#             */
+/*   Updated: 2024/03/03 11:23:13 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
+#ifndef DO_OP_H
+# define DO_OP_H
 
-int main(int argc, char **argv)
-{
-	int i = 0;
-	if(argc == 2)
-	{
-		while(argv[1][i])		
-		{
-			if(argv[1][i] >= 'A' && argv[1][i] <= 'Z')
-			{
-				argv[1][i] += 32;	
-				write(1, "_", 1);
-				write(1, &argv[1][i], 1);
-			}
-			else 
-				write(1, &argv[1][i], 1);
-			i++;
-		}
-	}	
-	write(1, "\n", 1);	
-	return (1);
-}
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+
+#endif

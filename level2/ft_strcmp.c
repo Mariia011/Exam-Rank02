@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   camel_to_snake.c                                   :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/02 18:03:08 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/03 11:27:25 by marikhac         ###   ########.fr       */
+/*   Created: 2024/03/03 13:15:49 by marikhac          #+#    #+#             */
+/*   Updated: 2024/03/03 13:31:07 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-
-int main(int argc, char **argv)
+int ft_strcmp(char *s1, char *s2)
 {
-	int i = 0;
-	if(argc == 2)
-	{
-		while(argv[1][i])		
-		{
-			if(argv[1][i] >= 'A' && argv[1][i] <= 'Z')
-			{
-				argv[1][i] += 32;	
-				write(1, "_", 1);
-				write(1, &argv[1][i], 1);
-			}
-			else 
-				write(1, &argv[1][i], 1);
-			i++;
-		}
-	}	
-	write(1, "\n", 1);	
-	return (1);
+    int i = 0;
+    if(!s1)
+        return(-1);
+    if(!s2)
+        return (1);
+    while ((s1[i] && s2[i]) && (s1[i] == s2[i]))
+        i++;
+    if((unsigned)s1[i] > (unsigned)s2[i])
+        return (1);
+    else if((unsigned)s1[i] < (unsigned)s2[i])
+        return (-1);
+    return (0);
 }
+/*
+#include <stdio.h>
+
+int main()
+{
+    printf("%d", ft_strcmp("abc", "ab"));
+}
+*/
