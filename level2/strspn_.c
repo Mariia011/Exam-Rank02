@@ -1,23 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_power_of_2.c                                    :+:      :+:    :+:   */
+/*   strspn_.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 17:29:17 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/04 21:20:16 by marikhac         ###   ########.fr       */
+/*   Created: 2024/03/04 14:31:37 by marikhac          #+#    #+#             */
+/*   Updated: 2024/03/04 16:07:04 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	    is_power_of_2(unsigned int n)
+#include <stdio.h>
+
+int ft_strchr(const char *str, int c)
 {
-return !((n - 1) & n);
+	while(*str)
+	{
+		if (*str == c)
+			return(1);
+		else
+			str++;
+	}
+return (0);
 }
 
-#include <stdio.h>
+size_t ft_strspn(const char *s, const char *accept)
+{
+	size_t size = 0;
+	while(s[size])
+	{
+		if(ft_strchr(accept, s[size]))
+		{
+			size++;
+		}
+		else
+			break ;
+	}
+	return (size);
+}
 
 int main()
 {
-	printf("%d", is_power_of_2(9));
+	printf("%zu", ft_strspn("abaaabbaha", "abcd"));
 }

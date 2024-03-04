@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_power_of_2.c                                    :+:      :+:    :+:   */
+/*   ft_strspn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 17:29:17 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/04 21:20:16 by marikhac         ###   ########.fr       */
+/*   Created: 2024/03/04 13:35:21 by marikhac          #+#    #+#             */
+/*   Updated: 2024/03/04 15:56:57 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	    is_power_of_2(unsigned int n)
-{
-return !((n - 1) & n);
-}
-
+#include <string.h>
 #include <stdio.h>
 
-int main()
+size_t ft_strspn(const char *s, const char *accept)
 {
-	printf("%d", is_power_of_2(9));
+	size_t  span = 0;
+	if(!s || !accept)
+		return (0);
+	while (s[span])
+	{
+		int i = 0;
+		while(accept[i])
+		{
+			if(s[span] == accept[i])
+				break;
+			else
+				i++;
+		}
+		if(s[span] != accept[i])
+			break;
+	span++;
+	}
+	return (span);
 }
+

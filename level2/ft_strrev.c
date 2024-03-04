@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_power_of_2.c                                    :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 17:29:17 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/04 21:20:16 by marikhac         ###   ########.fr       */
+/*   Created: 2024/03/04 13:09:25 by marikhac          #+#    #+#             */
+/*   Updated: 2024/03/04 17:28:38 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	    is_power_of_2(unsigned int n)
+char *ft_strrev(char *str)
 {
-return !((n - 1) & n);
-}
+	char *tmp;
 
-#include <stdio.h>
+	while(*str - 1)
+	{
 
-int main()
-{
-	printf("%d", is_power_of_2(9));
+	}
+
 }
