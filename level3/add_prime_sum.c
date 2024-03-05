@@ -6,7 +6,7 @@
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 18:54:50 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/01 20:15:00 by marikhac         ###   ########.fr       */
+/*   Updated: 2024/03/05 16:05:26 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,7 @@ int	is_prime(int x)
 	return (0);
 }
 
-
-
-void	add_prime_sum(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int	i;
 	int res;
@@ -57,11 +55,4 @@ void	add_prime_sum(int argc, char **argv)
 		i++;
 	}
 	ft_putnbr(res);
-}
-
-#include <stdio.h>
-
-int	main(int argc, char **argv)
-{
-	add_prime_sum(argc, argv);
 }

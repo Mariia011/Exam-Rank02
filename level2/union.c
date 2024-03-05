@@ -1,59 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   epur_str.c                                         :+:      :+:    :+:   */
+/*   union.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 19:15:51 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/05 15:47:46 by marikhac         ###   ########.fr       */
+/*   Created: 2024/03/05 16:30:03 by marikhac          #+#    #+#             */
+/*   Updated: 2024/03/05 17:52:28 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int is_delim(int c)
+int ft_check(char *str, int c)
 {
-return(c == ' ' || c == '\t');
-}
-
-int ft_check(char *str)
-{
-	while (*str)
+	while(*str)
 	{
-		if(!is_delim(*str))
-		{
-			return(1);
-		}
+		if(*str == c)
+			return(0);
 		str++;
 	}
-	return(0);
+	return (1);
 }
 
-void epur_str(char *str)
+void union_(char *str, char *str2)
 {
-	int flag = 0;
+	char compare[256];
 	int i = 0;
+	int x = 0;
+	int t = 0;
 	while (str[i])
 	{
-		if (!is_delim(str[i]))
-		{
-			flag = 1;
-			write(1, str + i, 1);
-		}
-		if (flag && is_delim(str[i]) && ft_check(str + i))
+		if(ft_check(compare, str[i]))
 		{
 			write(1, str + i, 1);
-			flag = 0;
+			compare[t++] = str[i];
 		}
-			i++;
+		i++;
 	}
-	write(1, "\n", 1);
+	while (str2[x])
+	{
+		if(ft_check(compare, str2[x]))
+		{
+			write(1, str2 + x, 1);
+			compare[t++] = str2[x];
+		}
+		x++;
+	}
 }
 
 int main(int argc, char **argv)
 {
-	if(argc == 2)
-		epur_str(argv[1]);
+	if (argc == 3)
+	{
+		union_(argv[1], argv[2]);
+	}
 	return (0);
 }
