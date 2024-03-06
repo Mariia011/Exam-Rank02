@@ -6,7 +6,7 @@
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 21:24:16 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/04 21:27:57 by marikhac         ###   ########.fr       */
+/*   Updated: 2024/03/06 19:21:29 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,16 @@
 
 void print_bits(unsigned char octel)
 {
+	int i = 8;
 
+	while(i)
+	{
+
+		i--;
+	}
+}
+
+int main()
+{
+	print_bits('1');
 }
