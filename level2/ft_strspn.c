@@ -6,12 +6,11 @@
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 13:35:21 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/04 15:56:57 by marikhac         ###   ########.fr       */
+/*   Updated: 2024/03/06 17:36:50 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdio.h>
 
 size_t ft_strspn(const char *s, const char *accept)
 {
