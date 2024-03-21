@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   max.c                                              :+:      :+:    :+:   */
+/*   ft_list_remove.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 15:53:08 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/21 17:48:01 by marikhac         ###   ########.fr       */
+/*   Created: 2024/03/20 19:12:20 by marikhac          #+#    #+#             */
+/*   Updated: 2024/03/20 21:30:25 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int max(int * tab, unsigned int len)
+#include "ft_list.h"
+//#include <stdio.h>
+void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 {
-	if (len == 0)
-		return (0);
-
-	int index = 0;
-	int elem = tab[0];
-
-	while(--len)
+	if(!begin_list || *begin_list == 0)
+		return;
+	if(cmp(*begin_list, data_ref) == 0)
 	{
-		if (tab[len] > elem)
-		{
-			elem = tab[len];
-		}
+
 	}
-	return (elem);
+
+
 }

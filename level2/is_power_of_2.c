@@ -6,18 +6,11 @@
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 17:29:17 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/04 21:20:16 by marikhac         ###   ########.fr       */
+/*   Updated: 2024/03/21 17:47:55 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	    is_power_of_2(unsigned int n)
 {
 return !((n - 1) & n);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	printf("%d", is_power_of_2(9));
 }

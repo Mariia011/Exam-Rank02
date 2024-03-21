@@ -6,7 +6,7 @@
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 13:15:49 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/04 17:29:33 by marikhac         ###   ########.fr       */
+/*   Updated: 2024/03/21 17:47:55 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,3 @@ int ft_strcmp(char *s1, char *s2)
         return (-1);
     return (0);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-    printf("%d", ft_strcmp("abc", "ab"));
-}
-*/

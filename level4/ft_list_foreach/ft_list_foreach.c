@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   max.c                                              :+:      :+:    :+:   */
+/*   ft_list_foreach.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 15:53:08 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/21 17:48:01 by marikhac         ###   ########.fr       */
+/*   Created: 2024/03/20 19:04:57 by marikhac          #+#    #+#             */
+/*   Updated: 2024/03/20 19:33:22 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "ft_list.h"
 
-int max(int * tab, unsigned int len)
+void    ft_list_foreach(t_list *begin_list, void (*f)(void *))
 {
-	if (len == 0)
-		return (0);
-
-	int index = 0;
-	int elem = tab[0];
-
-	while(--len)
+	while(begin_list->next)
 	{
-		if (tab[len] > elem)
-		{
-			elem = tab[len];
-		}
+		f(begin_list->data);
+		begin_list = begin_list->next;
 	}
-	return (elem);
 }

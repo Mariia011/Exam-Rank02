@@ -6,7 +6,24 @@
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 18:20:07 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/06 18:20:12 by marikhac         ###   ########.fr       */
+/*   Updated: 2024/03/14 19:10:53 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+void ft_swap(int *a, int *b)
+{
+	int tmp;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+// #include <stdio.h>
+
+// int main()
+// {
+// 	int a = 10;
+// 	int b = 2;
+// 	ft_swap(&a, &b);
+// 	printf("%d %d", a, b);
+// }

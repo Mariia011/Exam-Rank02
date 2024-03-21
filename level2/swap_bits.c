@@ -6,7 +6,7 @@
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 18:24:27 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/06 18:25:16 by marikhac         ###   ########.fr       */
+/*   Updated: 2024/03/14 20:14:40 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@ unsigned char swap_bits(unsigned char octet)
 	return ((octet >> 4) | (octet << 4));
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-	printf("%u", swap_bits('a'));
-}
+// int main()
+// {
+// 	printf("%u", swap_bits('a'));
+// }

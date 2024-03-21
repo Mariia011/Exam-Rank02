@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marikhac <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 12:46:18 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/04 13:07:57 by marikhac         ###   ########.fr       */
+/*   Updated: 2024/03/21 17:47:55 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,4 @@ char *ft_strpbrk(const char *s1, const char *s2)
 	x++;
 	}
 	return("NULL");
-}
-
-#include <stdio.h>
-
-int main()
-{
-	char *str = ft_strpbrk("Hello, this is Elon Mask", "E");
-	printf("%s", str);
 }

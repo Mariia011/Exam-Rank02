@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   max.c                                              :+:      :+:    :+:   */
+/*   is_pow_of_2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 15:53:08 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/21 17:48:01 by marikhac         ###   ########.fr       */
+/*   Created: 2024/03/21 17:33:55 by marikhac          #+#    #+#             */
+/*   Updated: 2024/03/21 17:46:45 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int max(int * tab, unsigned int len)
+int is_power_of_2(unsigned int n)
 {
-	if (len == 0)
-		return (0);
-
-	int index = 0;
-	int elem = tab[0];
-
-	while(--len)
+	while(n % 2 == 0)
 	{
-		if (tab[len] > elem)
-		{
-			elem = tab[len];
-		}
+		n /= 2;
 	}
-	return (elem);
+	if(n == 1)
+		return(1);
+	return(0);
 }

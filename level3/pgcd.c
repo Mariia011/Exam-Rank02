@@ -1,21 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   pgcd.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 15:39:21 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/04 15:54:43 by marikhac         ###   ########.fr       */
+/*   Created: 2024/03/21 14:49:30 by marikhac          #+#    #+#             */
+/*   Updated: 2024/03/21 17:39:18 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "ft_strspn.c"
-//size_t ft_strspn(const char *s, const char *accept);
+#include <unistd.h>
 
-
-int main()
+int ft_atoi(char *str)
 {
-	printf("%zu", ft_strspn("abaaabbaha", "abcd"));
+	int res = 0;
+	while(*str)
+	{
+		res = res * 10 + (*str - '0');
+		str++;
+	}
+	return(res);
+}
+
+int main(int argc, char **argv)
+{
+	int a;
+	int b;
+	if(argc != 3)
+	{
+		write(1, "\n", 1);
+		return(0);
+	}
+	a = ft_atoi(argv[1]);
+	b = ft_atoi(argv[2]);
+	while(a != b)
+	{
+		if(a > b)
+			a -= b;
+		else
+			b -= a;
+	}
+	printf("%d", a);
+	return(1);
 }

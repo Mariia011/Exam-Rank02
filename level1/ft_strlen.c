@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   max.c                                              :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marikhac <marikhac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 15:53:08 by marikhac          #+#    #+#             */
-/*   Updated: 2024/03/21 17:48:01 by marikhac         ###   ########.fr       */
+/*   Created: 2024/03/14 18:59:58 by marikhac          #+#    #+#             */
+/*   Updated: 2024/03/14 19:01:59 by marikhac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int max(int * tab, unsigned int len)
+int ft_strlen(char *str)
 {
-	if (len == 0)
-		return (0);
-
-	int index = 0;
-	int elem = tab[0];
-
-	while(--len)
+	int i = 0;
+	if(!str)
+		return(0);
+	while(*str)
 	{
-		if (tab[len] > elem)
-		{
-			elem = tab[len];
-		}
+		i++;
+		str++;
 	}
-	return (elem);
 }
